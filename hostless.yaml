@@ -1,9 +1,7 @@
 build:
-  system: docker
+  system: auto
 
-dockerfile_path: "./Dockerfile"
-
-start_command: "/app/entrypoint.sh"
+start_command: "sh start.sh"
 
 health_check:
   type: tcp

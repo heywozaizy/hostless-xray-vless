@@ -1,0 +1,5 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "provider": "shell",
+  "buildAptPackages": ["curl", "unzip", "ca-certificates"]
+}
