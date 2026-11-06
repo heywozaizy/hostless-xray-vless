@@ -10,11 +10,8 @@ esac
 
 XRAY_BIN="./xray"
 if [ ! -x "$XRAY_BIN" ]; then
-  echo "downloading xray..."
-  curl -fsSL -o /tmp/xray.zip "https://github.com/XTLS/Xray-core/releases/download/v26.10.31/Xray-linux-64.zip"
-  unzip -o /tmp/xray.zip xray -d .
-  chmod +x ./xray
-  rm -f /tmp/xray.zip
+  echo "xray binary missing in image" >&2
+  exit 127
 fi
 
 cat > /tmp/xray-config.json <<JSON
